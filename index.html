@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For You 💚</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Floating hearts -->
+<div class="hearts"></div>
+
+<!-- Opening Screen -->
+<section id="opening" class="screen active">
+  <h1>Hi Babyyyyy💚</h1>
+  <p>Happy Heart's Day!</p>
+  <button onclick="showMenu()">Pipindutin mo or pipindutin mo? 💌</button>
+</section>
+
+<!-- Menu Screen -->
+<section id="menu" class="screen">
+  <h2>Pili ka bebii 🌸</h2>
+  <div class="menu-grid">
+    <div class="card" onclick="showSection('message')">💬 Mensahe ni Pribado</div>
+    <div class="card" onclick="showSection('mypic')">📷 Wag ito</div>
+    <div class="card" onclick="showSection('herpic')">🌷 I like this one</div>
+    <div class="card" onclick="showSection('voice')">🎧 aaa wag din ito</div>
+  </div>
+</section>
+
+<!-- Message -->
+<section id="message" class="screen">
+  <h2>💬 My Message</h2>
+  <p class="text">
+    Para sa minamahal kong ikaw 🌱<br><br>
+    I don’t know how to say this normally, so I coded it instead.
+    You make ordinary days feel softer, lighter, and somehow greener 💚  
+    Also… if this site breaks, pretend it’s part of the charm 😅
+  </p>
+  <button onclick="back()">← Back</button>
+</section>
+
+<!-- My Pic -->
+<section id="mypic" class="screen">
+  <h2>📷 This is me</h2>
+  <img src="assets/mypic.jpg" alt="My Pic" class="photo">
+  <p>Yes, I pressed upload while smiling 😄</p>
+  <button onclick="back()">← Back</button>
+</section>
+
+<!-- Her Pic -->
+<section id="herpic" class="screen">
+  <h2>🌷 This is you</h2>
+  <img src="assets/herpic.jpg" alt="Her Pic" class="photo">
+  <p>Someone very special 💚</p>
+  <button onclick="back()">← Back</button>
+</section>
+
+<!-- Voice -->
+<section id="voice" class="screen">
+  <h2>🎧 Listen to this</h2>
+  <audio controls>
+    <source src="assets/voice.mp3" type="audio/mpeg">
+    Your browser does not support audio.
+  </audio>
+  <p>I love youuuuu hihi ^^</p>
+  <button onclick="back()">← Back</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
