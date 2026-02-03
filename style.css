@@ -5,8 +5,8 @@
 
 body {
   margin: 0;
-  background: #e9f5ee;
-  color: #2f4f3e;
+  background: linear-gradient(180deg, #e8f6ff, #ffffff);
+  color: #1f2d3d;
   overflow-x: hidden;
 }
 
@@ -38,11 +38,11 @@ p {
 /* Buttons */
 button {
   margin-top: 20px;
-  padding: 12px 25px;
+  padding: 12px 28px;
   border: none;
   border-radius: 30px;
-  background: #9fd3b6;
-  color: #1f3d2b;
+  background: #8fd3f4;
+  color: #0b2c3d;
   font-size: 1rem;
   cursor: pointer;
   transition: transform 0.2s, background 0.2s;
@@ -50,29 +50,39 @@ button {
 
 button:hover {
   transform: scale(1.05);
-  background: #8bc9aa;
+  background: #6fc1ec;
 }
+
 
 /* Menu */
 .menu-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: column;
   gap: 15px;
+  width: 100%;
+  max-width: 320px;
   margin-top: 25px;
 }
 
+
 .card {
   padding: 20px;
-  border-radius: 20px;
-  background: #ffffff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  border-radius: 22px;
+  background: linear-gradient(135deg, #cdeefd, #f0fbff);
+  color: #0b2c3d;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.12);
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 16px 30px rgba(0,0,0,0.18);
 }
+
+
 
 /* Images */
 .photo {
@@ -89,16 +99,53 @@ button:hover {
 }
 
 /* Floating hearts */
-.hearts::before {
-  content: "💚 🌱 💚 🌸";
+.hearts {
   position: fixed;
-  top: -10%;
-  left: 50%;
-  font-size: 2rem;
-  animation: float 10s linear infinite;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+  background-image: 
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='80' height='80'><text x='10' y='50' font-size='32'>🐧</text></svg>");
+  background-repeat: repeat;
+  background-size: 80px 80px;
 }
+
+
 
 @keyframes float {
   0% { transform: translate(-50%, 0); opacity: 1; }
   100% { transform: translate(-50%, 120vh); opacity: 0; }
 }
+
+
+.gif {
+  width: 180px;
+  margin: 20px 0;
+  border-radius: 20px;
+}
+
+.gif2 {
+  display: block;
+  width: 180px;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+
+.card.msg {
+  background: linear-gradient(135deg, #ffd6e8, #ffeef6);
+}
+
+.card.me {
+  background: linear-gradient(135deg, #c7f0d8, #e9fff1);
+}
+
+.card.her {
+  background: linear-gradient(135deg, #cdeefd, #f0fbff);
+}
+
+.card.voice {
+  background: linear-gradient(135deg, #e6ddff, #f4f0ff);
+}
+
+
